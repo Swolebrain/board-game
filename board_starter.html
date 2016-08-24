@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Board Game Starter</title>
+    <link rel='stylesheet' href='style2.css' />
+  </head>
+  <body>
+    <h1>Super Skillful Board Game</h1>
+    <h2>Nothing But Pure Skill</h2>
+    <div id='board-container'></div>
+    <script>
+      let tbl = document.createElement('table');
+      let cellCounter = 0;
+      for (let r = 0; r < 8; r++){
+        let tr = document.createElement('tr');
+        tbl.appendChild(tr);
+        for (let c = 0; c < 8; c++){
+          let td = document.createElement('td');
+          if (r == 0 || r == 7 || c == 0 || c == 7)
+            td.classList=['board-cell'];
+          if (r===0 ){
+            td.id = 'cell'+c;
+          }
+          else if (c === 7 && r != 7){
+            td.id = 'cell'+(7+ r);
+          }
+          else if (c === 0 && r != 7){
+            td.id = 'cell'+(28-r);
+          }
+          else if (r===7){
+            td.id = 'cell'+(13+(8-c));
+          }
+          tr.appendChild(td);
+        }
+      }
+      document.getElementById('board-container').appendChild(tbl);
+      // let cells = document.querySelectorAll('td');
+      // Array.prototype.forEach.call(cells, function(e){
+      //   if ()
+      // });
+    </script>
+  </body>
+</html>

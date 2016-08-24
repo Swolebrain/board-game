@@ -1,0 +1,16 @@
+.dieholder{
+  position: relative;
+}
+
+#dieroll{
+  position:absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-110%);
+  margin: 0;
+}
+
+#die{
+  display: block;
+  margin: 0 auto;
+}

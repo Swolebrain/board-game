@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Board Game</title>
+    <link rel='stylesheet' href='style.css' />
+  </head>
+  <body>
+    <br /><br /><br /><br />
+    <div class='dieholder'>
+      <img src='Dodecahedron_360.png' id='die'/>
+      <h1 id='dieroll'></h1>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script>
+      $('#die').click(function(){
+        $('#dieroll').html('');
+        $(this).attr('src', 'Dodecahedron.gif');
+        setTimeout(function(){
+          $('#die').attr('src', 'Dodecahedron_360.png');
+          $('#dieroll').html(Math.floor(Math.random()*12)+1 );
+        }, 3100);
+      });
+    </script>
+  </body>
+</html>
