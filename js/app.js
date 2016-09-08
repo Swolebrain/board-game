@@ -24,7 +24,7 @@ function handleClick(e){
     roll.innerHTML = numSquares;
     e.target.src='dodecahedron_360.png';
     players[ turn++ % players.length].moveSquares(numSquares);
-  }, 3200);
+  }, 1900);
 }
 
 document.getElementById('die').onclick= handleClick;

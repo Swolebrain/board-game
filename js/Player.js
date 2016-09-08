@@ -14,18 +14,17 @@ export default class Player{
     //$(this.htmlElement).css("left", loc.left+'px');
   }
   moveSquares(n){
-    let self = this;
     let dest = this.pos+n;
-    const cb = function(){
-      if (self.pos === 27){
-        alert(self.name+" wins!");
+    const cb = ()=>{
+      if (this.pos === 27){
+        alert(this.name+" wins!");
         return;
       }
-      else if (self.pos === dest){
+      else if (this.pos === dest){
         return;
       }
       else{
-        self.moveOne()
+        this.moveOne()
         setTimeout(cb, 500);
       }
     }
